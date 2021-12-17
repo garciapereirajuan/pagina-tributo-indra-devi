@@ -1,8 +1,6 @@
 #### Pagina Tributo
 Pagina tributo a Indra Devi
 
-#### Destino de productos
-
 #### Está basado en React para mejorarlo en un futuro, pero es basicamente HTML (JSX) y CSS.
 
 ###### Getting Started with Create React App
