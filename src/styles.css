@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+
+:root .stylesPaginaTributo{
+    --color-primario:rgb(245, 133, 118);
+    --color-secundario:rgb(243, 243, 243);
+    --color-terciario:rgb(248, 180, 63);
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+
+.stylesPaginaTributo{
+
+  font-family:"Quicksand",-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto','Helvetica Neue', Arial, sans-serif;
+  font-size:1.2rem;
+  text-align:center;
+  /* fondo rosa */
+  background-image:url("./image/background.png");
+  transition: all ease 1s;
+}
+.stylesPaginaTributo h1,p{
+  width:auto;
+  margin:0 auto;
+  padding:10px 0px;
+}
+.stylesPaginaTributo h1{
+  background:var(--color-primario);
+  color:white;
+}
+.stylesPaginaTributo p{
+  background:var(--color-secundario);
+  font-weight:bold;
+  color:rgb(90, 90, 90);
+  box-shadow:1px 1px 5px 1px grey;
+}
+.stylesPaginaTributo #contenedor{
+  margin:15px auto;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:auto auto auto auto;
+  grid-template-areas:
+    "imagen1 content1 ."
+    "content2 imagen2 ."
+    "imagen3 content3 .";
+}
+.stylesPaginaTributo .img-div{
+  width:auto;
+  height:min-content;
+  margin:10px;
+  padding-top:15px;
+  padding-bottom:10px;
+  border-radius:20px;
+  background:var(--color-secundario);
+  opacity:.98;
+  box-shadow:1px 1px 5px 1px grey;
+}
+.stylesPaginaTributo .img-div1{grid-area:imagen1; grid-column:1/2;}
+.stylesPaginaTributo .img-div2{grid-area:imagen2; grid-column:3/4;}
+.stylesPaginaTributo .img-div3{grid-area:imagen3; grid-column:1/2;height:min-content;}
+
+.stylesPaginaTributo .image{
+  box-sizing:border-box;
+  display:block;
+  margin:0 auto;
+  background:grey;
+  border-radius:20px;
+  border:1.8vw solid var(--color-primario);
+  box-shadow:1px 1px 5px 1px grey;
+  max-width:90%;
+}
+.stylesPaginaTributo .img-caption{
+  margin:0 auto;
+  max-width:90%;
+  padding:10px;
+  font-size:1.2rem;
+  text-align:justify;
+  font-weight:normal;
+  color:#000;
+}
+.stylesPaginaTributo .tribute-info{
+  margin:10px;
+  height:auto;
+  padding:0 10px;
+  background:var(--color-secundario);
+  font-size:1.3rem;
+  border-radius:20px;
+  box-shadow:1px 1px 10px 1px grey;
+}
+.stylesPaginaTributo .tribute1{
+  grid-area:content1;
+  grid-column:2/4;
+}
+.stylesPaginaTributo .tribute2{
+  grid-area:content2;
+  grid-column: 1/3;
+}
+.stylesPaginaTributo .tribute3{
+  grid-area:content3;
+  grid-column:2/4;
+}
+.stylesPaginaTributo .fuente-link{
+  font-size: .8em;
+  font-weight: bold;
+  text-decoration: underline !important;
+  float: right;
+}
+
+.stylesPaginaTributo h3{
+  padding:10px 15px;
+  background:var(--color-primario);
+  border-radius:20px;
+  color:#fff;    
+}
+.stylesPaginaTributo li{  
+  margin-right:20px;
+  margin-bottom:10px;
+  text-align:justify;
+}
+.stylesPaginaTributo .li-link{
+  list-style:none;
+  font-weight:bold;
+  text-align:center;
+}
+.stylesPaginaTributo .tribute-link{
+  text-decoration:none;
+  transition:all .15s ease-out;
+  padding:2px 5px;
+  border-radius:5px;
+  color:#000;
+}
+.stylesPaginaTributo .tribute-link:hover{
+  color:#fff;
+  transition:all .15s ease-out;
+  background:rgb(162, 162, 255);
+}
+.stylesPaginaTributo .tribute-link:active{
+  background:rgb(186, 133, 236);
+}
+.stylesPaginaTributo footer{
+  padding:5px;
+  background:grey;
+  color:white;
+  font-family:"Ubuntu Mono";
+  font-weight:bold;
+}
+
+/* Consultas de medio */
+@media (max-width:850px){
+  .stylesPaginaTributo #contenedor{
+    grid-template-areas:
+      "imagen1"
+      "content1"
+      "imagen2"
+      "content2"
+      "imagen3"
+      "content3";
+  }
+  .stylesPaginaTributo .tribute-info, .stylesPaginaTributo .img-div{
+    grid-column:1/4;
+  }
+  .stylesPaginaTributo .img-div{
+    margin:0 auto;
+    width:90vw;
+  }
+
+  .stylesPaginaTributo, .stylesPaginaTributo  #tribute-info{
+    font-size:1.2rem;
+  }
+}
+
+@media (max-width:700px){
+  .stylesPaginaTributo > .img-div2, .stylesPaginaTributo > .img-div3{
+    width:80vw;
+  }
+}
+
+@media (max-width:550px){
+  .stylesPaginaTributo > .img-div1{
+    width:80vw;
+  }
+}
